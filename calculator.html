@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>calculator</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+
+<body style="background-color:lightblue;">
+<br><br>
+<div class="container">
+<div class="jumbotron col-xl-4 col-xl-4 col-md-6 col-md-3 p-x- p-y-3 col-xs-12" >
+
+    <div class="row">
+      <div class="col">
+	     <input class="display" placeholder="0" id="outputvalue"> </input>
+	 
+	  </div>
+    </div> 
+ <br>
+ 
+  <div class="row">
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-primary" onclick="allclear()"><h4>AC</h4></button>
+	  </div>
+	  <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-primary" onclick="val('+/-')"><h4>+/-</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-primary" onclick="val('%')"><h4>%<h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-info" onclick="val('/')"><img src="divide.png" width="30px"/></button>
+	  </div>
+  </div>
+  <br>
+    <div class="row">
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-danger" onclick="val('7')"><h4>7</h4></button>
+	  </div>
+	  <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val('8')"><h4>8</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val('9')" ><h4>9</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-info" onclick="val('*')" ><h4>X</h4></button>
+	  </div>
+  </div>
+  <br>
+      <div class="row">
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-danger"onclick="val('4')" ><h4>4</h4></button>
+	  </div>
+	  <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val('5')" ><h4>5</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val('6')"  ><h4>6</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-info" onclick="val('-')" ><h1>-</h1></button>
+	  </div>
+  </div>
+  <br>
+   <div class="row">
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-danger" onclick="val('1')" ><h4>1</h4></button>
+	  </div>
+	  <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val('2')" ><h4>2</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val('3')" ><h4>3</h4></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-info" onclick="val('+')" ><h2>+</h2></button>
+	  </div>
+  </div>
+  <br>
+    <div class="row">
+      <div class="col-lg-6 col-sm-6">
+	     <button class="btn btn-success" onclick="val('0')" ><h4>0</h4></button>
+	  </div>
+	  <div class="col-lg-3 col-sm-3">
+	     <button class="btn  btn-danger" onclick="val(',')" ><h1>,</h1></button>
+	  </div>
+      <div class="col-lg-3 col-sm-3">
+	     <button class="btn btn-info" onclick="equalto()" ><h2>=</h2></button>
+	  </div>
+  </div>
+
+  
+   
+</div>
+
+</div>
+
+
+
+
+
+</body>
+
+<script>
+var output=document.getElementById("outputvalue");
+
+function val(number){
+   output.value += number;
+}
+
+function equalto(){
+   output.value =eval(output.value);
+}
+
+function allclear(){
+   output.value = "";
+}
+
+
+
+
+</script>
+</html>
+
+
+
+
